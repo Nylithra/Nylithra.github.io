@@ -23,7 +23,7 @@ form.addEventListener('submit', function(e) {
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  result.innerHTML = "Please wait..."
+  result.innerHTML = "Bekleyin..."
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -36,7 +36,7 @@ form.addEventListener('submit', function(e) {
         .then(async (response) => {
             let json = await response.json();
             if (response.status == 200) {
-                result.innerHTML = "Form submitted successfully";
+                result.innerHTML = "Başarılı :) ";
             } else {
                 console.log(response);
                 result.innerHTML = json.message;
@@ -44,7 +44,7 @@ form.addEventListener('submit', function(e) {
         })
         .catch(error => {
             console.log(error);
-            result.innerHTML = "Something went wrong!";
+            result.innerHTML = "Başarısız :(";
         })
         .then(function() {
             form.reset();
