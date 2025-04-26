@@ -1,15 +1,22 @@
-<form
-  action="https://formspree.io/f/xjkwveze"
-  method="POST"
->
-  <label>
-    Sana Ulaşacağım E-posta:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Mesajınız:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Gönder</button>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nylithra | Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+
+<form class="box" action="https://formspree.io/f/xjkwveze" method="post">
+  <h1>Contact Me</h1>
+  <input type="text" name="name" placeholder="Email">
+  <input type="text" name="message" placeholder="Message">
+  <input type="submit" name="" value="Gönder">
+  <input type="hidden" name="redirect" value="https://aliberatates.github.io/">
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 </form>
+
+
+  </body>
+</html>
