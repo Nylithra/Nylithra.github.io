@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LanuxDavet Plugin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-teal-500 text-white p-4 flex justify-between sticky top-0 z-50">
+    <div class="font-bold text-xl">LanuxDavet</div>
+    <div class="space-x-4">
+      <a href="#features" class="hover:text-gray-200">Özellikler</a>
+      <a href="#commands" class="hover:text-gray-200">Komutlar</a>
+      <a href="#install" class="hover:text-gray-200">Kurulum</a>
+      <a href="#download" class="hover:text-gray-200">İndir</a>
+      <a href="#support" class="hover:text-gray-200">Destek</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-teal-400 text-white">
+    <h1 class="text-5xl font-bold mb-4">LanuxDavet Plugin</h1>
+    <p class="text-xl mb-6">Gelişmiş Minecraft davet sistemi plugin’i</p>
+    <a href="#download" class="bg-orange-500 px-6 py-3 rounded-lg hover:bg-orange-600 transition">Şimdi İndir</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20">
+    <h2 class="text-4xl font-bold text-center mb-12">Özellikler</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">Çift Davet Sistemi</h3>
+        <p>Eski ve yeni sistem birlikte çalışır.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">Süreli Kodlar</h3>
+        <p>Tarih bazlı kod geçerliliği sağlar.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">Otomatik Ödül</h3>
+        <p>100 altın otomatik verilir.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">IP Kontrolü</h3>
+        <p>Aynı IP’den gelen oyuncular engellenir.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">Placeholder Desteği</h3>
+        <p>%davetplugin_bitis% placeholder’ı ile bitiş tarihlerini gösterir.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold mb-2">Gelişmiş Yardım</h3>
+        <p>/ld-help komutu ile detaylı yardım alabilirsiniz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commands Section -->
+  <section id="commands" class="py-20 bg-gray-200">
+    <h2 class="text-4xl font-bold text-center mb-8">Komutlar</h2>
+    <div class="overflow-x-auto max-w-6xl mx-auto">
+      <table class="min-w-full bg-white rounded-lg shadow">
+        <thead class="bg-teal-500 text-white">
+          <tr>
+            <th class="px-6 py-3">Komut</th>
+            <th class="px-6 py-3">Açıklama</th>
+            <th class="px-6 py-3">Kullanım</th>
+            <th class="px-6 py-3">İzin</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="px-6 py-3">/davetet</td>
+            <td class="px-6 py-3">Davet kodu oluşturur</td>
+            <td class="px-6 py-3">/davetet</td>
+            <td class="px-6 py-3">davetplugin.davetet</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3">/davetkod</td>
+            <td class="px-6 py-3">Davet kodunu kullanır</td>
+            <td class="px-6 py-3">/davetkod &lt;kod&gt;</td>
+            <td class="px-6 py-3">davetplugin.davetkod</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3">/ldavetkur</td>
+            <td class="px-6 py-3">Süreli davet kodu oluşturur</td>
+            <td class="px-6 py-3">/ldavetkur &lt;başlangıç&gt; &lt;bitiş&gt;</td>
+            <td class="px-6 py-3">davetplugin.ldavetkur</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3">/ld-help</td>
+            <td class="px-6 py-3">Yardım menüsünü gösterir</td>
+            <td class="px-6 py-3">/ld-help</td>
+            <td class="px-6 py-3">davetplugin.ldhelp</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section id="install" class="py-20">
+    <h2 class="text-4xl font-bold text-center mb-8">Kurulum</h2>
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold mb-2">1. Plugin İndirme</h3>
+      <a href="/download/LanuxDavet-1.1.1.jar"><pre class="bg-gray-100 p-4 rounded">İndirmek İçin Basın</pre></a>
+
+      <h3 class="text-2xl font-semibold mt-6 mb-2">2. Sunucuya Yükleme</h3>
+      <ol class="list-decimal list-inside">
+        <li>İndirilen JAR dosyasını <code>plugins</code> klasörüne kopyalayın</li>
+        <li>Sunucuyu yeniden başlatın</li>
+        <li>Plugin otomatik olarak yüklenecektir</li>
+      </ol>
+
+      <h3 class="text-2xl font-semibold mt-6 mb-2">3. PlaceholderAPI (Opsiyonel)</h3>
+      <pre class="bg-gray-100 p-4 rounded"># PlaceholderAPI yükleyin (opsiyonel)
+https://www.spigotmc.org/resources/placeholderapi.6245/</pre>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="py-20 bg-gray-200 text-center">
+    <h2 class="text-4xl font-bold mb-6">İndir</h2>
+    <a href="https://github.com/Nylithra/LanuxDavet-Plugin/tree/main/releases" class="bg-teal-500 text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition mr-4">GitHub Releases</a>
+    <a href="/download/LanuxDavet-1.1.1.jar" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">Direct Download</a>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support" class="py-20 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">Destek</h2>
+    <p>Bir sorun mu yaşıyorsunuz? Bizimle iletişime geçin!</p>
+    <div class="mt-6 space-x-4">
+      <a href="/404.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Discord</a>
+      <a href="mailto:nylithra@gmail.com" class="bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition">Email</a>
+      <a href="https://lanux.xyz" class="bg-teal-500 text-white px-6 py-3 rounded hover:bg-teal-600 transition">Website</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+    &copy; 2025 LanuxDavet. MIT Lisansı ile lisanslanmıştır.
+  </footer>
+
+</body>
+</html>

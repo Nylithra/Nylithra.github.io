@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normane</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 fixed w-full z-10 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-400">NORMANE</h1>
+      <div class="space-x-6">
+        <a href="#ozellikler" class="hover:text-indigo-400">Özellikler</a>
+        <a href="#hakkinda" class="hover:text-indigo-400">Hakkında</a>
+        <a href="#komutlar" class="hover:text-indigo-400">Komutlar</a>
+        <a href="#davet" class="bg-indigo-500 px-3 py-2 rounded-lg hover:bg-indigo-600">Davet Et</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6" id="hero">
+    <h2 class="text-5xl font-extrabold text-indigo-400 mb-4">NORMANE</h2>
+    <p class="text-xl text-gray-300 max-w-2xl">Sunucunuza hem güçlü moderasyon hem de eğlence katan gelişmiş Discord botu. Güvenlik, düzen ve eğlence bir arada!</p>
+    <a href="#davet" class="mt-6 bg-indigo-500 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600">Sunucuna Ekle</a>
+  </section>
+
+  <!-- Özellikler -->
+  <section class="py-20 bg-gray-800" id="ozellikler">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Özellikler</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-xl font-semibold text-indigo-400 mb-2">🔒 Moderasyon</h4>
+          <p>Ban, kick, mute, otomatik filtreler ve gelişmiş log sistemiyle sunucunuzu güvende tutar.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-xl font-semibold text-indigo-400 mb-2">🎉 Eğlence</h4>
+          <p>Müzik, oyun, anket, eğlenceli komutlar ve daha fazlasıyla topluluğunuzu aktif tutar.</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-xl font-semibold text-indigo-400 mb-2">⚙️ Kişiselleştirme</h4>
+          <p>Oto-rol, hoş geldin mesajı, özel prefix ve gelişmiş ayarlarla sunucunuza uyum sağlar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkında -->
+  <section class="py-20" id="hakkinda">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h3 class="text-3xl font-bold mb-6">Bot Hakkında</h3>
+      <p class="text-gray-300 text-lg">NORMANE, Discord sunucuları için tasarlanmış modern bir asistandır. Hem yöneticilere güçlü kontrol imkanı sunar hem de üyelerin keyifli vakit geçirmesi için çeşitli eğlenceli özellikler içerir.</p>
+    </div>
+  </section>
+
+  <!-- Komutlar -->
+  <section class="py-20 bg-gray-800" id="komutlar">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Komutlar</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-indigo-400 font-semibold mb-2">Moderasyon</h4>
+          <ul class="space-y-1 text-gray-300">
+            <li>/ban</li>
+            <li>/kick</li>
+            <li>/mute</li>
+            <li>/clear</li>
+          </ul>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-indigo-400 font-semibold mb-2">Eğlence</h4>
+          <ul class="space-y-1 text-gray-300">
+            <li>/meme</li>
+            <li>/oylama</li>
+            <li>/müzik</li>
+            <li>/profil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Davet -->
+  <section class="py-20 text-center" id="davet">
+    <h3 class="text-3xl font-bold mb-6">Botu Sunucuna Davet Et</h3>
+    <p class="text-gray-300 mb-6">Hemen botu sunucuna ekleyerek topluluğunu daha güvenli ve eğlenceli hale getir.</p>
+    <a href="/404.html" target="_blank" class="bg-indigo-500 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600">Davet Linki</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-6 mt-10">
+    <p class="text-gray-400">© 2025 NORMANE. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('[data-sr]', { 
+      distance: '40px',
+      duration: 1000,
+      easing: 'ease-out',
+      origin: 'bottom',
+      interval: 200
+    });
+  </script>
+</body>
+</html>

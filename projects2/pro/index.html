@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro İşletim Sistemi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('light');
+      localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
+    }
+    window.onload = () => {
+      if(localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    }
+  </script>
+  <style>
+    .light body { background-color: #f9fafb; color: #1f2937; }
+    .light nav { background-color: #e5e7eb; }
+    .light footer { background-color: #e5e7eb; }
+    .light .section-dark { background-color: #f3f4f6; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans transition-colors duration-300">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 fixed w-full z-10 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="/images/works/prologo.png" alt="Pro Logo" class="h-8">
+        <h1 class="text-2xl font-bold text-orange-400">Pro OS</h1>
+      </div>
+      <div class="space-x-6 flex items-center">
+        <a href="#ozellikler" class="hover:text-orange-400">Özellikler</a>
+        <a href="#indir" class="hover:text-orange-400">İndir</a>
+        <a href="#hakkinda" class="hover:text-orange-400">Hakkında</a>
+        <a href="#iletisim" class="bg-orange-500 px-3 py-2 rounded-lg hover:bg-orange-600">İletişim</a>
+        <button onclick="toggleTheme()" class="ml-4 bg-gray-700 px-3 py-2 rounded-lg hover:bg-gray-600">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6" id="hero">
+    <img src="/images/works/prologo.png" alt="Pro Logo" class="h-28 mb-6">
+    <h2 class="text-5xl font-extrabold text-orange-400 mb-4">Pro İşletim Sistemi</h2>
+    <p class="text-xl text-gray-300 max-w-2xl">Yerli, hızlı, güvenli ve modern işletim sistemi. Bilgisayarınız için en iyi deneyim.</p>
+    <a href="#indir" class="mt-6 bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">Hemen İndir</a>
+  </section>
+
+  <!-- Özellikler -->
+  <section class="py-20 section-dark" id="ozellikler">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Özellikler</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-900 light:bg-white p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-xl font-semibold text-orange-400 mb-2">⚡ Hızlı</h4>
+          <p>Optimize edilmiş çekirdeğiyle yüksek performans ve düşük gecikme.</p>
+        </div>
+        <div class="bg-gray-900 light:bg-white p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-xl font-semibold text-orange-400 mb-2">🔒 Güvenli</h4>
+          <p>Gelişmiş güvenlik protokolleri ve yerleşik koruma sistemleri.</p>
+        </div>
+        <div class="bg-gray-900 light:bg-white p-6 rounded-xl shadow-lg" data-sr>
+          <h4 class="text-xl font-semibold text-orange-400 mb-2">🇹🇷 Yerli</h4>
+          <p>Tamamen yerli ekip tarafından geliştirilmiş özgün bir işletim sistemi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İndir -->
+  <section class="py-20 text-center" id="indir">
+    <h3 class="text-3xl font-bold mb-6">İndir</h3>
+    <p class="text-gray-300 mb-6 light:text-gray-700">Pro İşletim Sistemi’ni ücretsiz indirip deneyin.</p>
+    <div class="space-x-4">
+      <a href="/404.html" class="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">64-bit ISO</a>
+      <a href="/404.html" class="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">32-bit ISO</a>
+    </div>
+  </section>
+
+  <!-- Hakkında -->
+  <section class="py-20 section-dark text-center px-6" id="hakkinda">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-6">Hakkında</h3>
+      <p class="text-gray-300 light:text-gray-700 text-lg">Pro İşletim Sistemi, modern ihtiyaçlara yönelik olarak geliştirilmiş, yerli ve güvenli bir işletim sistemidir. Amacımız, kullanıcıların özgür, güvenli ve hızlı bir deneyim yaşamasını sağlamaktır.</p>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section class="py-20 text-center" id="iletisim">
+    <h3 class="text-3xl font-bold mb-6">İletişim</h3>
+    <p class="text-gray-300 light:text-gray-700 mb-6">Bize ulaşmak için aşağıdaki kanalları kullanabilirsiniz:</p>
+    <div class="space-x-4">
+      <a href="mailto:nylithra@gmail.com" class="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">E-posta</a>
+      <a href="/404.html" class="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">Twitter</a>
+      <a href="/404.html" class="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover:bg-orange-600">Discord</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-6 mt-10">
+    <p class="text-gray-400 light:text-gray-600">© 2025 Pro İşletim Sistemi. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('[data-sr]', { 
+      distance: '40px',
+      duration: 1000,
+      easing: 'ease-out',
+      origin: 'bottom',
+      interval: 200
+    });
+  </script>
+</body>
+</html>
