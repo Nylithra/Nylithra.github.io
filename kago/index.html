@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kago Besle Animasyon</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .kago-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    background: #fff0;
+  }
+  .kago-img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .hamburger {
+    position: absolute;
+    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+  }
+  .fall {
+    transform: translateY(400px) rotate(720deg);
+    opacity: 0;
+  }
+</style>
+</head>
+<body class="bg-yellow-100 flex flex-col items-center justify-center min-h-screen">
+<h1 class="text-3xl font-bold mb-4">Kago'yu Besle!</h1>
+
+<div class="kago-container">
+  <img src="kago.png" alt="Kago" class="kago-img">
+</div>
+
+<p class="mt-4">Yemek sayısı: <span id="food-count">0</span></p>
+<button id="feed-btn" class="mt-4 bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600">Yemek Ver 🍔</button>
+
+<audio id="eat-sound" src="minecraft_eat.mp3"></audio>
+
+<script>
+const container = document.querySelector('.kago-container');
+const foodDisplay = document.getElementById('food-count');
+const feedBtn = document.getElementById('feed-btn');
+const eatSound = document.getElementById('eat-sound');
+
+let foodCount = parseInt(localStorage.getItem('foodCount') || '0');
+
+function updateDisplay(){
+  foodDisplay.textContent = foodCount;
+}
+
+// Yemek Ver fonksiyonu
+function feedKago(){
+  foodCount++;
+  localStorage.setItem('foodCount', foodCount);
+  updateDisplay();
+
+  // Animasyonlu hamburger
+  const burger = document.createElement('div');
+  burger.textContent = '🍔';
+  burger.className = 'hamburger';
+  burger.style.bottom = `${foodCount*40}px`;
+  container.appendChild(burger);
+
+  setTimeout(() => {
+    burger.classList.add('fall');
+    setTimeout(() => container.removeChild(burger), 500);
+  }, 50);
+
+  // Minecraft yemek sesi
+  eatSound.currentTime = 0;
+  eatSound.play();
+}
+
+// Başlangıçta display güncelle
+updateDisplay();
+
+feedBtn.addEventListener('click', feedKago);
+
+// Test: başta 0 yemek
+if(!localStorage.getItem('foodCount')){
+  foodCount = 0;
+  localStorage.setItem('foodCount', 0);
+  updateDisplay();
+}
+</script>
+</body>
+</html>
