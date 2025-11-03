@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nylithra | Kişisel Portföy</title>
 
-<!-- Favicon -->
+
 <link rel="icon" href="https://nylithra.blogspot.com/favicon.ico" type="image/x-icon">
 
 <style>
@@ -13,7 +13,7 @@
   * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
   body {background:#0b0b0d;color:#f5f5f5;line-height:1.6;overflow-x:hidden;}
 
-  /* Theme Colors */
+
   :root{
     --main-red: #ff4b4b;
     --bright-red: #ff1f1f;
@@ -22,7 +22,7 @@
     --card-bg: #1a1a1d;
   }
 
-  /* Header */
+
   header {position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);z-index:1000;}
   .logo {font-size:1.6rem;font-weight:600;color:var(--main-red);}
   nav ul {display:flex;list-style:none;}
@@ -30,12 +30,12 @@
   nav ul li a {color:var(--light-text);text-decoration:none;transition:.3s;}
   nav ul li a:hover {color:var(--main-red);}
 
-  /* Sections */
+
   section {padding:100px 60px;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
   h2 {font-size:2.2rem;margin-bottom:25px;color:var(--main-red);}
   p {max-width:800px;margin:auto;font-size:1.05rem;}
 
-  /* Hero */
+
   .hero {background:linear-gradient(135deg,#111,#1a1a1f);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
   .hero h1 {font-size:2.8rem;}
   .hero span {color:var(--main-red);}
@@ -43,18 +43,17 @@
   .btn {margin-top:20px;background:var(--main-red);color:#fff;padding:10px 25px;border-radius:8px;text-decoration:none;transition:.3s;font-weight:600;}
   .btn:hover {background:var(--bright-red);color:#fff;}
 
-  /* Scroll Down Arrow */
+
   .scroll-down {margin-top:40px;animation:bounce 2s infinite;cursor:pointer;}
   @keyframes bounce {0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
   .scroll-down svg {width:35px;height:35px;fill:var(--main-red);transition:.3s;}
   .scroll-down:hover svg {fill:var(--bright-red);}
 
-  /* Hakkımda */
-  .about {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;margin-top:30px;}
+    .about {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;margin-top:30px;}
   .about img {width:200px;border-radius:50%;border:4px solid var(--main-red);animation:float 3s ease-in-out infinite;}
   @keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
 
-  /* Projeler */
+
   .projects {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;width:100%;max-width:1100px;margin-top:30px;}
   .card {background:var(--card-bg);border-radius:10px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:.3s;transform:translateY(30px);opacity:0;}
   .card img {width:100%;height:150px;object-fit:cover;}
@@ -62,21 +61,21 @@
   .card p {padding:0 15px 20px 15px;font-size:0.9rem;}
   .card:hover {transform:translateY(-5px) scale(1.02);}
 
-  /* Dosyalar */
+
   .files {display:flex;flex-direction:column;gap:15px;align-items:center;margin-top:30px;}
   .file {background:var(--card-bg);color:var(--main-red);text-decoration:none;padding:15px 30px;border-radius:10px;width:fit-content;transition:.3s;}
   .file:hover {background:var(--main-red);color:#fff;}
 
-  /* İletişim */
+ 
   form {display:flex;flex-direction:column;gap:15px;width:100%;max-width:450px;margin-top:20px;}
   input,textarea {padding:15px;border:none;border-radius:8px;background:var(--card-bg);color:#fff;resize:none;}
   button {background:var(--main-red);color:#fff;padding:12px;border:none;border-radius:8px;cursor:pointer;font-weight:600;transition:.3s;}
   button:hover {background:var(--bright-red);}
 
-  /* Footer */
+
   footer {text-align:center;padding:30px 0;background:#111;color:#aaa;}
 
-  /* Scroll animations */
+
   .show {opacity:1 !important;transform:translateY(0)!important;transition:all 0.6s ease;}
   @media(max-width:768px){header{padding:10px 30px;}section{padding:80px 30px;}}
 </style>
@@ -95,7 +94,7 @@
   </nav>
 </header>
 
-<!-- HERO -->
+
 <section class="hero" id="anasayfa">
   <h1>Merhaba, ben <span>Nylithra</span></h1>
   <p>İçerik Üreticisi & Geliştirici</p>
@@ -105,7 +104,7 @@
   </div>
 </section>
 
-<!-- Hakkımda -->
+
 <section id="hakkimda">
   <h2>Hakkımda</h2>
   <div class="about">
@@ -117,14 +116,14 @@
   </div>
 </section>
 
-<!-- Projeler -->
+
 <section id="projeler">
   <h2>Projelerim</h2>
   <div class="projects">
-    <!-- Örnek 15 proje kartı -->
+   
     <div class="card"><img src="https://nylithra.vercel.app/images/works/favicon.png"><h3>Lanux Account</h3><p>Lanux'un Hesap Kontrol Merkezi.</p></div>
     <div class="card"><img src="https://nylithra.vercel.app/images/works/altinbot.png"><h3>AltınBot</h3><p>Çizgi izleyen robot projesi.</p></div>
-    <div class="card"><img src="https://raw.githubusercontent.com/Nylithra/Nylithra.github.io/refs/heads/main/images/works/2.png"><h3>Axiro</h3><p>Türkiye'nin Mesajlaşma Platformu.</p></div>
+    <div class="card"><img src="https://nylithra.vercel.app/images/works/2.png"><h3>Axiro</h3><p>Türkiye'nin Mesajlaşma Platformu.</p></div>
     <div class="card"><img src="https://nylithra.vercel.app/images/works/sarp.png"><h3>SARP</h3><p>Gelişmiş Afet Drone</p></div>
     <div class="card"><img src="https://nylithra.vercel.app/images/works/bum.png"><h3>Lanux Auth</h3><p>Hızlı Ve Güvenli Giriş Sistemi.</p></div>
     <div class="card"><img src="https://nylithra.vercel.app/images/works/lanuxdavet.png"><h3>LanuxDavet</h3><p>Gelişmiş Davet Plugini.</p></div>
@@ -136,20 +135,21 @@
   </div>
 </section>
 
-<!-- Dosyalar -->
+
 <section id="dosyalar">
   <h2>Dosyalarım</h2>
   <div class="files">
     <a href="#" class="file">📄 CV</a>
     <a href="#" class="file">📦 Kaynak Kodlar</a>
     <a href="#" class="file">📁 Tasarım Arşivim</a>
+    <a href="https://github.com/Nylithra/kurs" class="file">📚 Kurs Dosyaları</a>
   </div>
   <div class="scroll-down" onclick="scrollNext('#iletisim')">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"/></svg>
   </div>
 </section>
 
-<!-- İletişim -->
+
 <section id="iletisim">
   <h2>Bana Ulaşın</h2>
   <form id="contactForm">
@@ -178,4 +178,5 @@
 
 </body>
 </html>
+
 
