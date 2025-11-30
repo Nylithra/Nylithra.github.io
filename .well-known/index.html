@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almanya | Rusya Duyuru Sistemi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="feedback-form">
+  <h2>Powered By Lanux</h2>
+  <form id="feedbackForm">
+
+    <label for="subject">Duyuru Konusu:</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="comment">Mesaj:</label>
+    <textarea id="comment" name="comment"></textarea>
+
+    <!-- ✔ Everyone & Here seçeneği -->
+    <label style="margin-top:15px;">
+      <input type="checkbox" id="pingToggle">
+      @everyone & @here bildirimi gönder
+    </label>
+
+    <button type="submit">Gönder</button>
+  </form>
+  <p id="status"></p>
+</section>
+
+<script>
+document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const subject = document.getElementById('subject').value;
+  const comment = document.getElementById('comment').value;
+  const ping = document.getElementById('pingToggle').checked;
+
+  // ✔ Ping varsa ekle, yoksa boş bırak
+  const pingText = ping ? "\n||@everyone @here||" : "";
+
+  const payload = {
+    content: `# ${subject}\n${comment}${pingText}`
+  };
+
+  const webhookURL = "https://discord.com/api/webhooks/1444725394157604935/Rs8sSIgRWwU-lBnRn6BdOdWPM0zyEHb19U63WByy9KwCCdsvvjeO6m31JZ6qAdk62k3F"; // ← kendi webhook'unu buraya koy
+
+  try {
+    const res = await fetch(webhookURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (res.ok) {
+      document.getElementById('status').innerText = "Gönderildi!";
+      document.getElementById('feedbackForm').reset();
+    } else {
+      document.getElementById('status').innerText = "Gönderim başarısız!";
+    }
+
+  } catch (err) {
+    document.getElementById('status').innerText = "Bir hata oluştu.";
+  }
+});
+</script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.feedback-form {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.feedback-form h2 {
+  color: #1E90FF;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.feedback-form label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  color: #333333;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: #1E90FF;
+  box-shadow: 0 0 10px rgba(30,144,255,0.2);
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.feedback-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.feedback-form button {
+  margin-top: 20px;
+  background: #1E90FF;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback-form button:hover {
+  background: #00CED1;
+  box-shadow: 0 5px 15px rgba(0,206,209,0.3);
+}
+
+#status {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #1E90FF;
+}
+
+@keyframes fadeInUp {
+  0% {opacity:0; transform:translateY(30px);}
+  100% {opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:600px) {
+  .feedback-form {
+    padding: 30px 20px;
+  }
+}
+</style>
+
+</body>
+</html>
