@@ -1,1 +1,0 @@
-Bu Bir Test Sayfasıdır.
