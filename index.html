@@ -3,181 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nylithra | Kişisel Portföy</title>
-
-
-<link rel="icon" href="https://nylithra.blogspot.com/favicon.ico" type="image/x-icon">
-
+<title>Nylithra • Kişisel Sayfa</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-  * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-  body {background:#0b0b0d;color:#f5f5f5;line-height:1.6;overflow-x:hidden;}
-
-
-  :root{
-    --main-red: #ff4b4b;
-    --bright-red: #ff1f1f;
-    --dark-bg: #0b0b0d;
-    --light-text: #f5f5f5;
-    --card-bg: #1a1a1d;
-  }
-
-
-  header {position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);z-index:1000;}
-  .logo {font-size:1.6rem;font-weight:600;color:var(--main-red);}
-  nav ul {display:flex;list-style:none;}
-  nav ul li {margin-left:25px;}
-  nav ul li a {color:var(--light-text);text-decoration:none;transition:.3s;}
-  nav ul li a:hover {color:var(--main-red);}
-
-
-  section {padding:100px 60px;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-  h2 {font-size:2.2rem;margin-bottom:25px;color:var(--main-red);}
-  p {max-width:800px;margin:auto;font-size:1.05rem;}
-
-
-  .hero {background:linear-gradient(135deg,#111,#1a1a1f);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-  .hero h1 {font-size:2.8rem;}
-  .hero span {color:var(--main-red);}
-  .hero p {margin-top:10px;font-size:1.1rem;}
-  .btn {margin-top:20px;background:var(--main-red);color:#fff;padding:10px 25px;border-radius:8px;text-decoration:none;transition:.3s;font-weight:600;}
-  .btn:hover {background:var(--bright-red);color:#fff;}
-
-
-  .scroll-down {margin-top:40px;animation:bounce 2s infinite;cursor:pointer;}
-  @keyframes bounce {0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
-  .scroll-down svg {width:35px;height:35px;fill:var(--main-red);transition:.3s;}
-  .scroll-down:hover svg {fill:var(--bright-red);}
-
-    .about {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;margin-top:30px;}
-  .about img {width:200px;border-radius:50%;border:4px solid var(--main-red);animation:float 3s ease-in-out infinite;}
-  @keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-
-
-  .projects {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;width:100%;max-width:1100px;margin-top:30px;}
-  .card {background:var(--card-bg);border-radius:10px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:.3s;transform:translateY(30px);opacity:0;}
-  .card img {width:100%;height:150px;object-fit:cover;}
-  .card h3 {margin:15px 0;color:var(--main-red);}
-  .card p {padding:0 15px 20px 15px;font-size:0.9rem;}
-  .card:hover {transform:translateY(-5px) scale(1.02);}
-
-
-  .files {display:flex;flex-direction:column;gap:15px;align-items:center;margin-top:30px;}
-  .file {background:var(--card-bg);color:var(--main-red);text-decoration:none;padding:15px 30px;border-radius:10px;width:fit-content;transition:.3s;}
-  .file:hover {background:var(--main-red);color:#fff;}
-
- 
-  form {display:flex;flex-direction:column;gap:15px;width:100%;max-width:450px;margin-top:20px;}
-  input,textarea {padding:15px;border:none;border-radius:8px;background:var(--card-bg);color:#fff;resize:none;}
-  button {background:var(--main-red);color:#fff;padding:12px;border:none;border-radius:8px;cursor:pointer;font-weight:600;transition:.3s;}
-  button:hover {background:var(--bright-red);}
-
-
-  footer {text-align:center;padding:30px 0;background:#111;color:#aaa;}
-
-
-  .show {opacity:1 !important;transform:translateY(0)!important;transition:all 0.6s ease;}
-  @media(max-width:768px){header{padding:10px 30px;}section{padding:80px 30px;}}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0d0d0d;color:#fff;overflow-x:hidden;}
+header{width:100%;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:#111;position:sticky;top:0;z-index:100;}
+.logo{font-size:24px;font-weight:800;letter-spacing:1px;}
+.logo span{color:#7c5cff;}
+nav a{margin-left:25px;text-decoration:none;color:#ccc;font-weight:500;transition:.3s;}
+nav a:hover{color:#7c5cff;}
+.hero{padding:120px 60px 80px;text-align:center;background:radial-gradient(circle at top,#1a1a1a,#0d0d0d 70%);}
+.hero h1{font-size:48px;font-weight:800;}
+.hero h1 span{color:#7c5cff;}
+.hero p{margin-top:15px;color:#bdbdbd;font-size:18px;}
+.section{padding:80px 60px;}
+.section h2{font-size:32px;font-weight:700;margin-bottom:40px;text-align:center;}
+.projects-grid,.skills-grid,.tools-grid{display:grid;gap:20px;}
+.projects-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.skills-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));text-align:center;}
+.tools-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));text-align:center;}
+.project-card{background:#111;padding:25px;border-radius:20px;border:1px solid #1f1f1f;transition:.3s;position:relative;}
+.project-card:hover{border-color:#7c5cff;transform:translateY(-6px);}
+.project-card h3{font-size:20px;margin-bottom:12px;}
+.project-card p{font-size:14px;color:#bdbdbd;line-height:1.5;}
+.skill-card,.tool-card{background:#111;padding:20px;border-radius:16px;border:1px solid #1f1f1f;transition:.3s;}
+.skill-card:hover,.tool-card:hover{border-color:#7c5cff;transform:translateY(-4px);}
+.skill-card p,.tool-card p{margin-top:8px;font-size:14px;color:#bdbdbd;}
+footer{padding:30px 40px;background:#111;text-align:center;color:#777;font-size:14px;}
+footer span{color:#7c5cff;}
+@media(max-width:768px){
+  header{padding:20px 25px;}
+  nav{display:none;}
+  .hero{padding:100px 30px 60px;}
+  .hero h1{font-size:38px;}
+  .section{padding:60px 30px;}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Nylithra</div>
+  <div class="logo">NYLITHRA <span>DEV</span></div>
   <nav>
-    <ul>
-      <li><a href="#hakkimda">Hakkımda</a></li>
-      <li><a href="#projeler">Projelerim</a></li>
-      <li><a href="#dosyalar">Dosyalarım</a></li>
-      <li><a href="#iletisim">İletişim</a></li>
-    </ul>
+    <a href="#projects">Projeler</a>
+    <a href="#skills">Uzmanlık</a>
+    <a href="#tools">Araçlar</a>
+    <a href="#contact">İletişim</a>
   </nav>
 </header>
 
-
-<section class="hero" id="anasayfa">
-  <h1>Merhaba, ben <span>Nylithra</span></h1>
-  <p>İçerik Üreticisi & Geliştirici</p>
-  <a href="#projeler" class="btn">Projelerime Göz At</a>
-  <div class="scroll-down" onclick="scrollNext('#hakkimda')">
-    <svg xmlns="https://yt3.googleusercontent.com/G1YGKFOS5eDLv3-7JrOUQbVkXYJxoQ7S_fibd5Usiplta-XWEYXZatfXaSxKIRN2Iyc4-MJSkA=s160-c-k-c0x00ffffff-no-rj" viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"/></svg>
-  </div>
+<section class="hero">
+  <h1>Merhaba, Ben <span>Nylithra</span></h1>
+  <p>Geliştirici, içerik üreticisi ve teknoloji meraklısı. Projelerim ve becerilerim burada!</p>
 </section>
 
-
-<section id="hakkimda">
-  <h2>Hakkımda</h2>
-  <div class="about">
-    <img src="https://yt3.googleusercontent.com/G1YGKFOS5eDLv3-7JrOUQbVkXYJxoQ7S_fibd5Usiplta-XWEYXZatfXaSxKIRN2Iyc4-MJSkA=s160-c-k-c0x00ffffff-no-rj" alt="Nylithra">
-    <p>Ben <strong>Ali Berat Ateş (Nylithra)</strong>. Teknolojiye, üretkenliğe ve modern web çözümlerine tutkuyla bağlı bir içerik üreticisiyim. Discord botları, web platformları ve otomasyon sistemleri geliştiriyorum. Hedefim sade ama etkili dijital deneyimler sunmak.</p>
-  </div>
-  <div class="scroll-down" onclick="scrollNext('#projeler')">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"/></svg>
-  </div>
-</section>
-
-
-<section id="projeler">
+<section class="section" id="projects">
   <h2>Projelerim</h2>
-  <div class="projects">
-   
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/favicon.png"><h3>Lanux Account</h3><p>Lanux'un Hesap Kontrol Merkezi.</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/altinbot.png"><h3>AltınBot</h3><p>Çizgi izleyen robot projesi.</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/2.png"><h3>Axiro</h3><p>Türkiye'nin Mesajlaşma Platformu.</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/sarp.png"><h3>SARP</h3><p>Gelişmiş Afet Drone</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/bum.png"><h3>Lanux Auth</h3><p>Hızlı Ve Güvenli Giriş Sistemi.</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/lanuxdavet.png"><h3>LanuxDavet</h3><p>Gelişmiş Davet Plugini.</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/norm.png"><h3>Normane</h3><p>Gelişmiş Eğlence Ve Moderasyon Botu.</p></div>
-    <div class="card"><img src="https://nylithra.vercel.app/images/works/proisletimsistemi.png"><h3>Pro İşletim Sistemi</h3><p>Türkiye'nin Gelişmiş İşletim Sistemi.</p></div>
-  </div>
-  <div class="scroll-down" onclick="scrollNext('#dosyalar')">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"/></svg>
-  </div>
-</section>
-
-
-<section id="dosyalar">
-  <h2>Dosyalarım</h2>
-  <div class="files">
-    <a href="#" class="file">📄 CV</a>
-    <a href="#" class="file">📦 Kaynak Kodlar</a>
-    <a href="#" class="file">📁 Tasarım Arşivim</a>
-    <a href="https://github.com/Nylithra/kurs" class="file">📚 Kurs Dosyaları</a>
-  </div>
-  <div class="scroll-down" onclick="scrollNext('#iletisim')">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"/></svg>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Axiro</h3>
+      <p>Anlık mesajlaşma platformu, güvenli ve hızlı mesajlaşma deneyimi sağlar.</p>
+    </div>
+    <div class="project-card">
+      <h3>Lanux Games</h3>
+      <p>Oyun topluluğu altyapısı, launcher sistemleri ve web entegrasyonları.</p>
+    </div>
+    <div class="project-card">
+      <h3>Lanux Bot</h3>
+      <p>Ekonomi, moderasyon, kayıt ve destek sistemleri için Discord botu.</p>
+    </div>
+    <div class="project-card">
+      <h3>Web Yönetim Paneli</h3>
+      <p>Kullanıcı ve içerik yönetimini sağlayan özel yazılım paneli.</p>
+    </div>
   </div>
 </section>
 
-
-<section id="iletisim">
-  <h2>Bana Ulaşın</h2>
-  <form id="contactForm">
-    <input type="text" placeholder="Adınız" required>
-    <input type="email" placeholder="E-posta Adresiniz" required>
-    <textarea rows="5" placeholder="Mesajınız" required></textarea>
-    <button type="submit">Gönder</button>
-  </form>
+<section class="section" id="skills">
+  <h2>Uzmanlık Alanlarım</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><h4>Frontend</h4><p>HTML, CSS, JS, React</p></div>
+    <div class="skill-card"><h4>Backend</h4><p>Node.js, C#, Dart</p></div>
+    <div class="skill-card"><h4>Veritabanı</h4><p>MySQL, MongoDB</p></div>
+    <div class="skill-card"><h4>Diğer</h4><p>API, Bot Geliştirme, Oyun Pluginleri</p></div>
+  </div>
 </section>
 
-<footer>© 2025 Nylithra | Tüm Hakları Saklıdır</footer>
+<section class="section" id="tools">
+  <h2>Kullandığım Program ve Araçlar</h2>
+  <div class="tools-grid">
+    <div class="tool-card"><h4>VS Code</h4><p>Kod geliştirme</p></div>
+    <div class="tool-card"><h4>Unreal Engine</h4><p>Oyun geliştirme</p></div>
+    <div class="tool-card"><h4>DartPad</h4><p>Dart testleri</p></div>
+    <div class="tool-card"><h4>Discord</h4><p>Bot geliştirme</p></div>
+  </div>
+</section>
 
-<script>
-  const cards=document.querySelectorAll('.card');
-  const observer=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
-  },{threshold:.2});
-  cards.forEach(c=>observer.observe(c));
+<section class="section" id="contact">
+  <h2>İletişim</h2>
+  <p style="text-align:center;color:#bdbdbd;">E-mail: <a href="mailto:nylithra@lanux.xyz" style="color:#7c5cff;">nylithra@lanux.xyz</a></p>
+</section>
 
-  function scrollNext(id){document.querySelector(id).scrollIntoView({behavior:'smooth'});}
-  
-  document.querySelector("#contactForm").addEventListener("submit",e=>{
-    e.preventDefault();alert("Mesajınız başarıyla gönderildi! 🎉");e.target.reset();
-  });
-</script>
+<footer>
+  © 2025 <span>Nylithra</span> • Tüm Hakları Saklıdır
+</footer>
 
 </body>
 </html>
-
-
-
